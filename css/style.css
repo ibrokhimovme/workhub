@@ -1,0 +1,547 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn{
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px ;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.btn:hover{
+    background-color: #604520 !important;
+    border: 1px solid #604520;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Ovo", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+.container{
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+header{
+    min-height: 100vh;
+    background-image: url(../images/header_bg.webp);
+    background-position: center;    
+    background-size: cover;
+    background-repeat: no-repeat;   
+    position: relative;
+}
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 14, 9, 0.6); /* Yarim shaffof qora qavat */
+    z-index: 1;
+}
+.header .head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    position: fixed;
+    z-index: 2;
+    align-items: center;
+    height: 80px;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Glassmorphism asosiy effekti */
+    background: rgba(0, 0, 0, 0.6); /* Yarim shaffof qora rang */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header .logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+}
+.header nav{
+    align-items: center;
+    display: flex;
+}
+.header .header_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header_list li{
+    margin: 0 10px;
+    list-style-type: none;
+    color: #fff;
+    align-items: center;
+    position: relative;
+}
+.header .header_list li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s ease;
+}
+.header .header_list li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: .2s ease-in;
+}
+.header .header_list li a:hover::before{
+    width: 100%;
+}
+.header .header_main{
+    display: flex;
+    min-height: calc(100vh - 80px);
+    align-items: center;
+    justify-content: center;
+}
+.header .header_main .container{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    gap: 20px;
+}
+.header .header_main h2{
+    font-size: 55px;
+    font-family: "Ovo", serif;
+}
+.header .header_main p{
+    font-size: 20px;
+    max-width: 600px;
+    font-family: serif;
+}
+.aboutus{
+    background-color: #FFE7B4;
+}
+.aboutus .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* min-height: 50vh;/ */
+    text-align: center;
+    padding-bottom: 50px;
+}
+.aboutus .container h2{
+    font-size: 55px;
+    margin-bottom: 20px;
+    font-family: "Ovo", serif;
+    margin-top: 50px;
+}
+.aboutus .container p{
+    font-size: 30px;
+    font-family: serif;
+}
+.services{
+    background-color: #604520;
+    padding: 50px 0;
+}
+.services .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.services .container>h2{
+    font-size: 55px;
+    color: #fff;
+    font-family: "Ovo", serif;
+    margin-bottom: 20px;
+}
+.services .container .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.services .container .card{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.services .container .card img{
+    max-width: 100%;
+    height: auto;
+}
+.services .container .card h3{
+    font-size: 25px;
+    padding: 0 10px;
+}
+.services .container .card p{
+    font-size: 20px;
+    padding: 0 1cqw;
+}
+.services .container > button:hover{
+    background-color: #FFE7B4 !important;
+    color: #333;
+}
+.meetings{
+    position: relative;
+}
+.meetings .meetings-navigation{
+    position: absolute;
+    left: 30px;
+    bottom: 10%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.meetings .meetings-navigation{
+    font-size: 50px;
+    font-weight: bold;
+}
+.meetings .meetings-navigation button{
+    border: 1px solid #62462b;
+    color: #62462b;
+}
+.meetings .meetings-navigation button:hover{
+    color: #fff;
+}
+.meetings .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2;
+    padding-right: 0;
+    align-items: center;
+}
+.meetings img{
+    max-width: 100%;
+}
+.meetings .meetings_main{
+    padding: 0 20px;
+    padding-left: 0;
+}
+.meetings .meetings_main h3{
+    font-size: 35px;
+    font-family: "Ovo", serif;
+}
+.meetings .meetings_main p{
+    font-size: 20px;   
+    margin-bottom: 30px;
+}
+.meetings .meetings_main .btn{
+    text-decoration: none;
+    border: 1px solid #222;
+    color: #333;
+}
+.meetings .meetings_main .btn:hover{
+    color: #fff;
+}
+.plans{
+    text-align: center;
+    padding: 50px 0;
+    background-color: #FFE7B4;
+}
+.plans h2{
+    font-size: 55px;
+    font-family: "Ovo", serif;
+    margin-bottom: 20px;
+}
+.plans .boxes{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.plans .boxes .box{
+    background-color: #FFFFE7;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.plans .boxes .box h3{
+    font-size: 30px;
+    font-family: "Ovo", serif;
+}
+.plans .boxes .box hr{
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    height: 1px;
+    background-color: #333;
+}
+
+.plans .boxes .box ul li{
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    padding: 5px 20px;
+    text-align: left;
+}
+.plans .boxes .box img{
+    width: 30px;
+    height: 30px;
+}
+.plans .boxes .box p{
+    font-family: "Ovo", serif;
+    font-size: 25px;
+    margin: 10px auto;
+}
+.plans .boxes .box .btn{
+    background-color: #fff;
+    border: 1px solid #333;
+    color: #333;
+
+}
+.plans .boxes .box .btn:hover{
+    color: #fff;
+}
+
+.faq-section {
+    background-color: #62462b;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .faq-section h2 {
+    font-size: 55px;
+    font-family: "Ovo", serif;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .faq-item {
+    border-bottom: 1px solid #fff;
+    padding: 20px 0;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Ovo",serif;
+  }
+  .faq-item:last-child{
+    border-bottom: none;
+  }
+  
+  .faq-question {
+    display: grid;
+  grid-template-columns: 1fr auto; /* Savol va ikonka uchun ikki ustun */
+  align-items: center;
+    cursor: pointer;
+  }
+  .faq-question h3{
+    font-size: 25px;
+    font-weight:  normal;
+    justify-self: center;
+  }
+  .faq-answer {
+    display: none;
+    padding-top: 10px;
+    font-size: 20px;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .faq-icon {
+    justify-self: end; /* Ikonkani o'ng tomonga joylash */
+  font-size: 18px;
+  }
+  
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+  .contact-section{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #FFE7B4;
+  }
+  .contact-section > img{
+    max-width: 100%;
+    height: auto;
+  }
+  .contact-section h2{
+    font-size: 55px;
+    font-family: "Ovo", serif;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-section .contact-form > div{
+    display: flex;
+    gap: 20px;
+  }
+  .contact_message{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin: 40px 0;
+    line-height: 0;
+  }
+  .contact-section label{
+    display: block;
+  }
+  .contact-section input,
+  .contact-section textarea{
+    background-color: #EBD5A6;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    resize: none;
+  }
+  .contact-section textarea{
+    max-width: 750px;
+  }
+  .contact-section button{
+    color: #333;
+    border: 1px solid #333;
+  }
+  .contact-section button:hover{
+    color: #fff;
+  }
+  .footer{
+    padding: 20px 0;
+    text-align: center;
+  }
+  /* Normalize.css alohida saqlangan */
+/* Responsiv Media Queries qo'shildi */
+@media (max-width: 1200px) {
+    .header .head {
+        height: auto;
+        text-align: center;
+    }
+    
+    .services .container .cards,
+    .plans .boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+    .meetings .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+    .contact-section textarea {
+        max-width: 100%;
+    }
+}
+@media (max-width: 930px) {
+    .header .header_list{
+        display: none;
+    }
+    .meetings{
+        padding: 40px 20px;
+    }
+    .meetings .container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin: 0 auto ;
+        gap: 0;
+        padding: 0;
+        direction: ltr;
+    }
+    .meetings .container > img{
+        margin: 40px 0;
+        grid-row: 1;
+    }
+    .contact-section > img{
+        display: none;
+    }
+    .contact-section{
+        padding: 40px 20px;
+    }
+}
+@media (max-width: 768px) {
+    .header .header_main h2 {
+        font-size: 40px;
+    }
+    .header .header_main p {
+        font-size: 18px;
+    }
+    .services .container .cards,
+    .plans .boxes {
+        grid-template-columns: 1fr;
+    }
+    .aboutus .container h2 {
+        font-size: 40px;
+    }
+    .aboutus .container p {
+        font-size: 18px;
+    }
+    .services .container h2,
+    .plans h2,
+    .faq-section h2,
+    .contact-section h2 {
+        font-size: 40px;
+    }
+    .meetings .meetings_main h3,
+    .services .container .card h3,
+    .plans .boxes .box h3 {
+        font-size: 25px;
+    }
+    .faq-item h3 {
+        font-size: 18px;
+    }
+    .contact-section textarea,
+    .contact-section input {
+        width: 100%;
+    }
+    .contact_message {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn{
+        font-size: 16px;
+    }
+    .header .logo {
+        font-size: 30px;
+    }
+    .header .header_main h2 {
+        font-size: 30px;
+    }
+    .header .header_main p {
+        font-size: 16px;
+    }
+    .services .container h2,
+    .plans h2,
+    .faq-section h2,
+    .contact-section h2 {
+        font-size: 30px;
+    }
+    .aboutus .container h2 {
+        font-size: 30px;
+    }
+    .services .container .card h3,
+    .plans .boxes .box h3,
+    .meetings .meetings_main h3 {
+        font-size: 20px;
+    }
+    .faq-item h3 {
+        font-size: 16px;
+    }
+}
